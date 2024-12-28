@@ -8,7 +8,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #d9b583;
+    background-color: #222;
 }
 
 header {
@@ -19,21 +19,36 @@ header {
     justify-content: center;
     font-family: "Bonheur Royale", cursive;
     font-size: 1.5rem; 
+    color: #a85b2c;
 }
 
-main section {
-    margin: 0 0 2rem 0;
+#section-score {
     display: flex;
-    justify-content: space-around;
-    gap: 10rem;
-    font-size: 1rem;
-    font-weight: bold;
+    background-color: #333;
+    border: 2px solid #000;
+    max-width: 63.5rem;
+    width: 100%;
 }
 
-#score {
-    padding: 1rem;
-    background-color: #a39c98;
-    border: 2px solid #000;
+#score-ally {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#score, #score-ally {
+    padding: .5rem;
+    background-color: #333;
+    width: 50%;
+}
+
+#score, #score-ally, p, div.bar {
+    margin: .2rem;
+}
+
+#energy-ally, div.bar-ally {
+    margin: 0 0 3px 0;
 }
 
 main {
@@ -41,7 +56,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    font-size: .9rem;
+    font-family: "Trade Winds", system-ui; 
+    color: #ddd;
 }
 
 #dungeon {
@@ -67,7 +85,7 @@ main {
     height: auto;
 }
 
-.bar {
+.bar, .bar-ally {
     width: 10rem;
     height: 1rem;
     background-color: #ddd;
@@ -76,7 +94,7 @@ main {
     margin: 10px 0;
 }
 
-#energy-bar {
+#energy-bar, #energy-ally-bar {
     height: 100%;
     background-color: #4a9a4c;
     transition: width 0.3s ease;
@@ -84,20 +102,27 @@ main {
 }
 
 #instructions {
-    padding: 1rem;
-    background-color: #a39c98;
+    padding: .7rem;
+    background-color: #333;
     border: 2px solid #000;
+    max-width: 63.5rem;
+    width: 100%;
 }
 
 table {
     border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    padding: 0 1rem;
 }
 
 #game-over {
     position: absolute;
-    top: 50%;
+    top: 50%-2rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
     padding: 1rem;
 }
 

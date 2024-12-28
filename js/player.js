@@ -5,14 +5,25 @@ let initialEnergy = 40;
 export let energy = initialEnergy;
 export let endGame = false;
 
-export function setPoints(pointsParameter) {
-    points = pointsParameter;
+/**
+ * Set points obtained by the hero
+ * @param {number} pointsParametre points obtained by the hero
+ */
+export function setPoints(pointsParametre) {
+    points = pointsParametre;
 }
 
-export function setEnergy(energyParameter) {
+/**
+ * Set hero's energy
+ * @param {number} energyParameter hero's energy
+ */
+export function setenergy(energyParameter) {
     energy = energyParameter;
 }
 
+/**
+ * Show hero's score
+ */
 export function showScore() {
     console.log('Points: '+ points);
 
@@ -21,7 +32,7 @@ export function showScore() {
     pointsHTML.innerText = `Points: ${points}`;
 
     console.log('energy: '+ energy);
-    // update energy in the html
+    // Update energy in the html
     const energyHTML = document.getElementById('energy');
     energyHTML.innerText = `energy: ${energy}`;
 
@@ -30,15 +41,26 @@ export function showScore() {
 }
 
 export let heroVertical, heroHorizontal;
-// add a setter to modify the poition of the hero
+
+/**
+ * Set the vertical position of the character in the grid
+ * @param {number} verticalPosition character's vertical position
+ */
 export function setHeroVertical(verticalPosition) {
     heroVertical = verticalPosition;
 }
 
+/**
+ * Set the horizontal position of the character in the grid
+ * @param {number} horizontalPosition character's horizontal position
+ */
 export function setHeroHorizontal(horizontalPosition) {
     heroHorizontal = horizontalPosition;
 }
 
+/**
+ * Initialize hero's position
+ */
 export function initializeHeroPosition() {
     points = 0;
     energy = initialEnergy;
@@ -48,10 +70,13 @@ export function initializeHeroPosition() {
     heroVertical = Math.floor(gridHeight/2); // index of the centre (vertical axis)
     heroHorizontal = Math.floor(gridWidth/2); // index of the centre (horizontal axis)
 
-    dungeonGrid[heroVertical][heroHorizontal] = 'HERO';
+    dungeonGrid[heroVertical][heroHorizontal] = 'hero';
     console.table(dungeonGrid); // show the grid in the console
 }
 
+/**
+ * Check if the energy is at 0 to end the game
+ */
 export function verifyEnergy() {
     if (energy <= 0) {
         console.log('GAME OVER');
@@ -60,6 +85,9 @@ export function verifyEnergy() {
     }
 }
 
+/**
+ * End the game when called
+ */
 export function exitGame() {
     console.log('Goodbye!');
     showScore();
