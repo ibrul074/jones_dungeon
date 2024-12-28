@@ -1,150 +1,159 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    background-color: #222;
+  margin: 0;
+  background-color: #222;
 }
 
 header {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "Bonheur Royale", cursive;
-    font-size: 1.5rem; 
-    color: #a85b2c;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bonheur Royale', cursive;
+  font-size: 1.5rem;
+  color: #a85b2c;
 }
 
 #section-score {
-    display: flex;
-    background-color: #333;
-    border: 2px solid #000;
-    max-width: 63.5rem;
-    width: 100%;
+  display: flex;
+  background-color: #333;
+  border: 2px solid #000;
+  max-width: 63.5rem;
+  width: 100%;
 }
 
 #score-ally {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-#score, #score-ally {
-    padding: .5rem;
-    background-color: #333;
-    width: 50%;
+#score,
+#score-ally {
+  padding: 0.5rem;
+  background-color: #333;
+  width: 50%;
 }
 
-#score, #score-ally, p, div.bar {
-    margin: .2rem;
+#score,
+#score-ally,
+p,
+div.bar {
+  margin: 0.2rem;
 }
 
-#energy-ally, div.bar-ally {
-    margin: 0 0 3px 0;
+#energy-ally,
+div.bar-ally {
+  margin: 0 0 3px;
 }
 
 main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: .9rem;
-    font-family: "Trade Winds", system-ui; 
-    color: #ddd;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-family: 'Trade Winds', system-ui;
+  color: #ddd;
 }
 
 #dungeon {
-    display: flex;
-    flex-direction: column;
-    background-color: #4a4441; /* background color of the dungeon */
-    padding: .5rem;
-    border: 2px solid #000;
-    max-width: 63.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #4a4441; /* background color of the dungeon */
+  padding: 0.5rem;
+  border: 2px solid #000;
+  max-width: 63.5rem;
 }
 
 #dungeon div {
-    display: flex;
+  display: flex;
 }
 
 #dungeon div div {
-    max-width: 2.5rem;
+  max-width: 2.5rem;
 }
 
 #dungeon img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.bar, .bar-ally {
-    width: 10rem;
-    height: 1rem;
-    background-color: #ddd;
-    border: 1px solid #020202;
-    border-radius: .5rem;
-    margin: 10px 0;
+.bar,
+.bar-ally {
+  width: 10rem;
+  height: 1rem;
+  background-color: #ddd;
+  border: 1px solid #020202;
+  border-radius: 0.5rem;
+  margin: 10px 0;
 }
 
-#energy-bar, #energy-ally-bar {
-    height: 100%;
-    background-color: #4a9a4c;
-    transition: width 0.3s ease;
-    border-radius: .5rem;
+#energy-bar,
+#energy-ally-bar {
+  height: 100%;
+  background-color: #4a9a4c;
+  transition: width 0.3s ease;
+  border-radius: 0.5rem;
 }
 
 #instructions {
-    padding: .7rem;
-    background-color: #333;
-    border: 2px solid #000;
-    max-width: 63.5rem;
-    width: 100%;
+  padding: 0.7rem;
+  background-color: #333;
+  border: 2px solid #000;
+  max-width: 63.5rem;
+  width: 100%;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table td {
-    padding: 0 1rem;
+  padding: 0 1rem;
 }
 
 #game-over {
-    position: absolute;
-    top: 50%-2rem;
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 1rem;
+  position: absolute;
+  top: 50%-2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
 }
 
 #intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000cc; /* dark background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* over everything */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000c; /* dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* over everything */
 }
 
 #intro img {
-    max-width: 90%;
-    max-height: 90%;
-    cursor: pointer; /* show we can clic */
+  max-width: 90%;
+  max-height: 90%;
+  cursor: pointer; /* show we can clic */
 }
 
 #intro.hidden {
-    display: none; /* hides intro */
+  display: none; /* hides intro */
 }
