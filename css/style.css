@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: #d9b583;
+}
+
+header {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bonheur Royale", cursive;
+    font-size: 1.5rem; 
+}
+
+main section {
+    margin: 0 0 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#score {
+    padding: 1rem;
+    background-color: #a39c98;
+    border: 2px solid #000;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+#dungeon {
+    display: flex;
+    flex-direction: column;
+    background-color: #4a4441; /* background color of the dungeon */
+    padding: .5rem;
+    border: 2px solid #000;
+    max-width: 63.5rem;
+}
+
+#dungeon div {
+    display: flex;
+}
+
+#dungeon div div {
+    max-width: 2.5rem;
+}
+
+#dungeon img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bar {
+    width: 10rem;
+    height: 1rem;
+    background-color: #ddd;
+    border: 1px solid #020202;
+    border-radius: .5rem;
+    margin: 10px 0;
+}
+
+#energy-bar {
+    height: 100%;
+    background-color: #4a9a4c;
+    transition: width 0.3s ease;
+    border-radius: .5rem;
+}
+
+#instructions {
+    padding: 1rem;
+    background-color: #a39c98;
+    border: 2px solid #000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc; /* dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* over everything */
+}
+
+#intro img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer; /* show we can clic */
+}
+
+#intro.hidden {
+    display: none; /* hides intro */
+}
