@@ -9,10 +9,10 @@ import {
   exitGame,
   endGame,
   points,
-} from '/js/player.js';
-import { initializeGrid, showGridWithImages } from '/js/dungeon-grid.js';
-import { moveCharacter } from '/js/game-logic.js';
-import { initializePositionAlly, moveAlly, showScoreAlly } from '/js/ally.js';
+} from '../js/player.js';
+import { initializeGrid, showGridWithImages } from '../js/dungeon-grid.js';
+import { moveCharacter } from '../js/game-logic.js';
+import { initializePositionAlly, moveAlly, showScoreAlly } from '../js/ally.js';
 
 let newPositionHero;
 

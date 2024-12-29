@@ -1,6 +1,11 @@
-import { dungeonGrid, gridHeight, gridWidth } from '/js/dungeon-grid.js';
-import { tileEffect } from '/js/game-logic.js';
-import { heroVertical, heroHorizontal, points, setPoints } from '/js/player.js';
+import { dungeonGrid, gridHeight, gridWidth } from '../js/dungeon-grid.js';
+import { tileEffect } from '../js/game-logic.js';
+import {
+  heroVertical,
+  heroHorizontal,
+  points,
+  setPoints,
+} from '../js/player.js';
 
 export let allyVertical = 0; // Vertical position of the ally
 export let allyHorizontal = 0; // Horizontal position of the ally
@@ -83,7 +88,7 @@ export function setPointsAlly(pointsAlly) {
  * Set ally's energy
  * @param {number} energyAlly ally's energy
  */
-export function setenergyAlly(energyAlly) {
+export function setEnergyAlly(energyAlly) {
   allyEnergy = energyAlly;
 }
 

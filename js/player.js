@@ -1,4 +1,4 @@
-import { gridHeight, gridWidth, dungeonGrid } from '/js/dungeon-grid.js';
+import { gridHeight, gridWidth, dungeonGrid } from '../js/dungeon-grid.js';
 
 export let points = 0;
 let initialEnergy = 40;
@@ -17,7 +17,7 @@ export function setPoints(pointsParametre) {
  * Set hero's energy
  * @param {number} energyParameter hero's energy
  */
-export function setenergy(energyParameter) {
+export function setEnergy(energyParameter) {
   energy = energyParameter;
 }
 

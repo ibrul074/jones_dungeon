@@ -1,20 +1,20 @@
-import { dungeonGrid, gridHeight, gridWidth } from '/js/dungeon-grid.js';
+import { dungeonGrid, gridHeight, gridWidth } from '../js/dungeon-grid.js';
 import {
   points,
   energy,
   setPoints,
-  setenergy,
+  setEnergy,
   verifyEnergy,
-} from '/js/player.js';
+} from '../js/player.js';
 import {
   setPointsAlly,
-  setenergyAlly,
+  setEnergyAlly,
   allyPoints,
   allyEnergy,
   allyVertical,
   allyHorizontal,
   transferPoints,
-} from '/js/ally.js';
+} from '../js/ally.js';
 
 let randomNumberTrap = 0;
 let pourcentageWorkingBrokenTrap = 0.5;
@@ -78,11 +78,11 @@ export function tileEffect(currentTile, character) {
     // effect of the trap
     if (character === 'hero') {
       setPoints(points + trapPoints);
-      setenergy(energy + trapEnergy);
+      setEnergy(energy + trapEnergy);
       verifyEnergy();
     } else if (character === 'ally') {
       setPointsAlly(allyPoints + trapPoints);
-      setenergyAlly(allyEnergy + trapEnergy);
+      setEnergyAlly(allyEnergy + trapEnergy);
     }
   } else if (currentTile === 'broken-trap') {
     // effect of the broken trap
@@ -91,11 +91,11 @@ export function tileEffect(currentTile, character) {
       // effect of the trap when it works
       if (character === 'hero') {
         setPoints(points + trapPoints);
-        setenergy(energy + trapEnergy);
+        setEnergy(energy + trapEnergy);
         verifyEnergy();
       } else if (character === 'ally') {
         setPointsAlly(allyPoints + trapPoints);
-        setenergyAlly(allyEnergy + trapEnergy);
+        setEnergyAlly(allyEnergy + trapEnergy);
       }
     } else {
       if (character === 'hero') {
